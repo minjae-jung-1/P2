@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container paddingm">
+            <div class="columns">
+                <div class="column"> 
+                    <label for="Username">Username: </label>
+                    <input class="input" id="username"/> 
+                </div>
+            </div>
+            <div class="columns">
+                <div id="usersList" class="column">
+                </div>
+            </div>
+            <section class="container">
+      <div class="columns features">
+        <div id="minjCard" class="column is-4 is-hidden">
+          <div class="card is-shady">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="./LoL_Icon.png" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h4 id="UserNameHeader"></h4>
+                <p id="UserBody"></p>
+                <span id="toggleButton" class="button is-link modal-button" data-target="modal-image2">Hide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+     
+    </section>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+        <script src="javascript.js" async defer></script>
+    </body>
+</html>
