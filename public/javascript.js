@@ -13,12 +13,12 @@ userInput.addEventListener("change", (data)=> {
     console.log(userInput.value)
     let username = userInput.value;
 
-    fetch(`http://projectdol.herokuapp.com/api/user/${username}`).then(res => {
+    fetch(`https://projectdol.herokuapp.com/api/user/${username}`).then(res => {
         location.reload();
     });
 })
 
-fetch("http://projectdol.herokuapp.com/api/users").then(res=> res.json()).then(
+fetch("https://projectdol.herokuapp.com/api/users").then(res=> res.json()).then(
     data => {
         console.log(data);
         makeUserList(data);
