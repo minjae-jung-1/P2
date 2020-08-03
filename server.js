@@ -6,15 +6,15 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose")
 const User = require('./models/user')
 const cors = require("cors");
-
+let PORT = process.env.PORT || 3000
 var riotApiKey = "RGAPI-607ba14a-6294-44cb-b9dd-228184b35d32";
 
 var api = TeemoJS(riotApiKey);
 
 var url = "mongodb://localhost:27017/league"
-
+console.log(process.env.MONGOB_URI)
 mongoose.Promise = global.Promise;
-mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect(process.env.MONGOB_URI, {useNewUrlParser:true, useUnifiedTopology: true, useFindAndModify: false});
 
 app.use(bodyParser());
 app.use(cors({
@@ -83,7 +83,7 @@ app.get("/api/users", async (req, res) => {
 
 
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log("server running")
 })
 
