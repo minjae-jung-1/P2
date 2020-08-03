@@ -59,8 +59,9 @@ function toggleHidden(personClick){
 
 function renderCardData(user) {
     console.log("card data", user);
-    let pString = `<p>losses: ${user.losses}</p>
+    let pString = `
     <p>wins: ${user.wins}</p>
+    <p>losses: ${user.losses}</p>
     <p>rank: ${user.ranked}</p>`
 
     userBody.html(pString);
